@@ -24,7 +24,9 @@ These agents are available globally across all projects:
 | **repo-topology** | sonnet | Specialist | Architecture analysis, codebase structure, dependency mapping |
 | **pattern-learner** | opus | Meta | **Learning & autonomy**: tracks decisions across domains, identifies patterns, suggests graduated automation |
 | **knowledge-citadel** | sonnet | Utility | **Knowledge retrieval**: LOOKUP from Obsidian vault (insights, concepts, sources, sessions). No speculation. |
-| **scout** | haiku | Explorer | **Recon & triage**: explores unknowns, classifies items, routes or defers. Can call citadel directly. |
+| **insight-extractor** | sonnet | Specialist | **Insight creation**: extracts atomic insights from conversations/sources with provenance tracking |
+| **concept-linker** | haiku | Specialist | **Concept graph**: builds/maintains concept notes, links insights to concepts, manages relationships |
+| **scout** | sonnet | Explorer | **Recon & triage**: explores unknowns, classifies items, routes or defers. Can call citadel directly. |
 
 ### Archived Agents (No Longer Available)
 
