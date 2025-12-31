@@ -1,43 +1,6 @@
 ---
 name: tech-writer
-description: |
-  Use this agent when documentation needs to be created, reviewed, or updated. Specific scenarios include:
-
-  - Creating or updating README files, API docs, architecture overviews
-  - Generating PR descriptions (can be auto-invoked by gitops-devex)
-  - Writing migration guides for breaking changes
-  - Documenting multi-agent systems and workflows
-  - Auditing existing documentation for accuracy
-
-  Entry Points:
-  - `/document` command routes to this agent
-  - `/repo-documentation` skill is owned by this agent
-  - gitops-devex may spawn this agent for PR descriptions
-
-  Examples:
-
-  <example>
-  Context: Developer has just implemented a new MCP tool for marking episodes as watched.
-  user: "I've added a new markAsWatched tool to the server. Here's the implementation:"
-  <code implementation>
-  assistant: "I'll use the tech-writer agent to document this new tool."
-  <uses Agent tool to launch tech-writer>
-  tech-writer: "I'll document this new MCP tool with its interface, parameters, and usage examples."
-  </example>
-
-  <example>
-  Context: gitops-devex is creating a PR and needs a description
-  gitops-devex: "Spawning tech-writer to generate PR description from PR_SCOPE.md and commits"
-  <tech-writer reads PR_SCOPE.md from worktree, analyzes commits, generates structured PR description>
-  </example>
-
-  <example>
-  Context: User runs /document command
-  user: "/document api-reference"
-  assistant: "I'll use the tech-writer agent with the repo-documentation skill."
-  <tech-writer executes multi-phase documentation workflow>
-  </example>
-tools: Glob, Grep, Read, WebFetch, TodoWrite, WebSearch, BashOutput, KillShell, ListMcpResourcesTool, ReadMcpResourceTool, AskUserQuestion, Skill, SlashCommand, Edit, Write, NotebookEdit, mcp__github__pull_request_read, mcp__github__get_commit, mcp__github__get_file_contents, mcp__github__list_commits, mcp__github__list_pull_requests, mcp__github__search_code, mcp__github__create_pull_request, mcp__github__add_issue_comment
+description: Use this agent when documentation needs to be created, reviewed, or updated. Specific scenarios include:\n\n- Creating or updating README files, API docs, architecture overviews\n- Generating PR descriptions (can be auto-invoked by gitops-devex)\n- Writing migration guides for breaking changes\n- Documenting multi-agent systems and workflows\n- Auditing existing documentation for accuracy\n\nEntry Points:\n- `/document` command routes to this agent\n- `/repo-documentation` skill is owned by this agent\n- gitops-devex may spawn this agent for PR descriptions\n\nExamples:\n\n<example>\nContext: Developer has just implemented a new MCP tool for marking episodes as watched.\nuser: "I've added a new markAsWatched tool to the server. Here's the implementation:"\n<code implementation>\nassistant: "I'll use the tech-writer agent to document this new tool."\n<uses Agent tool to launch tech-writer>\ntech-writer: "I'll document this new MCP tool with its interface, parameters, and usage examples."\n</example>\n\n<example>\nContext: gitops-devex is creating a PR and needs a description\ngitops-devex: "Spawning tech-writer to generate PR description from PR_SCOPE.md and commits"\n<tech-writer reads PR_SCOPE.md from worktree, analyzes commits, generates structured PR description>\n</example>\n\n<example>\nContext: User runs /document command\nuser: "/document api-reference"\nassistant: "I'll use the tech-writer agent with the repo-documentation skill."\n<tech-writer executes multi-phase documentation workflow>\n</example>tools: Glob, Grep, Read, WebFetch, TodoWrite, WebSearch, BashOutput, KillShell, ListMcpResourcesTool, ReadMcpResourceTool, AskUserQuestion, Skill, SlashCommand, Edit, Write, NotebookEdit, mcp__github__pull_request_read, mcp__github__get_commit, mcp__github__get_file_contents, mcp__github__list_commits, mcp__github__list_pull_requests, mcp__github__search_code, mcp__github__create_pull_request, mcp__github__add_issue_comment
 model: sonnet
 color: purple
 ---

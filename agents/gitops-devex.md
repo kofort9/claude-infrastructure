@@ -1,46 +1,6 @@
 ---
 name: gitops-devex
-description: |
-  Unified Git workflow authority with worktree-based workspace isolation. This is the ONLY agent permitted to perform git operations (branch, commit, push, PR) unless explicitly overridden.
-
-  Trigger this agent for:
-  - Creating isolated worktrees for parallel feature work
-  - All branch operations (create, switch, delete)
-  - All commit and push operations (with mandatory gates)
-  - GitHub PR lifecycle (create, update, merge)
-  - Branch health monitoring and remediation
-  - Pre-commit and pre-push validation gates
-  - Review loop automation with comment classification
-
-  Examples:
-  <example>
-  Context: User wants to start a new feature
-  user: "I need to add OAuth refresh handling"
-  assistant: "I'll use gitops-devex to create an isolated worktree for this feature."
-  <gitops-devex creates worktree, runs branch-health, scopes PR, returns workspace path>
-  </example>
-
-  <example>
-  Context: Code is ready to commit
-  user: "This looks good, let's commit"
-  assistant: "I'll use gitops-devex to run pre-commit gates and commit if all pass."
-  <gitops-devex runs lint/type-check/tests, blocks if any fail, commits only on success>
-  </example>
-
-  <example>
-  Context: Ready to push and create PR
-  user: "Push this and open a PR"
-  assistant: "I'll use gitops-devex to run pre-push gates, push, and create the PR."
-  <gitops-devex runs full test suite, blocks force push, creates PR with structured description>
-  </example>
-
-  <example>
-  Context: Review comments received
-  user: "There are review comments on the PR"
-  assistant: "I'll use gitops-devex to classify and address the review comments."
-  <gitops-devex classifies comments as actionable/escalate, auto-fixes actionable, asks human for tradeoffs>
-  </example>
-tools: Bash, Glob, Grep, Read, Edit, Write, NotebookEdit, WebFetch, TodoWrite, WebSearch, BashOutput, KillShell, AskUserQuestion, Skill, SlashCommand, Task, mcp__github__add_comment_to_pending_review, mcp__github__add_issue_comment, mcp__github__assign_copilot_to_issue, mcp__github__create_branch, mcp__github__create_or_update_file, mcp__github__create_pull_request, mcp__github__create_repository, mcp__github__delete_file, mcp__github__fork_repository, mcp__github__get_commit, mcp__github__get_file_contents, mcp__github__get_label, mcp__github__get_latest_release, mcp__github__get_me, mcp__github__get_release_by_tag, mcp__github__get_tag, mcp__github__get_team_members, mcp__github__get_teams, mcp__github__issue_read, mcp__github__issue_write, mcp__github__list_branches, mcp__github__list_commits, mcp__github__list_issue_types, mcp__github__list_issues, mcp__github__list_pull_requests, mcp__github__list_releases, mcp__github__list_tags, mcp__github__merge_pull_request, mcp__github__pull_request_read, mcp__github__pull_request_review_write, mcp__github__push_files, mcp__github__request_copilot_review, mcp__github__search_code, mcp__github__search_issues, mcp__github__search_pull_requests, mcp__github__search_repositories, mcp__github__search_users, mcp__github__sub_issue_write, mcp__github__update_pull_request, mcp__github__update_pull_request_branch, ListMcpResourcesTool, ReadMcpResourceTool
+description: Unified Git workflow authority with worktree-based workspace isolation. This is the ONLY agent permitted to perform git operations (branch, commit, push, PR) unless explicitly overridden.\n\nTrigger this agent for:\n- Creating isolated worktrees for parallel feature work\n- All branch operations (create, switch, delete)\n- All commit and push operations (with mandatory gates)\n- GitHub PR lifecycle (create, update, merge)\n- Branch health monitoring and remediation\n- Pre-commit and pre-push validation gates\n- Review loop automation with comment classification\n\nExamples:\n<example>\nContext: User wants to start a new feature\nuser: "I need to add OAuth refresh handling"\nassistant: "I'll use gitops-devex to create an isolated worktree for this feature."\n<gitops-devex creates worktree, runs branch-health, scopes PR, returns workspace path>\n</example>\n\n<example>\nContext: Code is ready to commit\nuser: "This looks good, let's commit"\nassistant: "I'll use gitops-devex to run pre-commit gates and commit if all pass."\n<gitops-devex runs lint/type-check/tests, blocks if any fail, commits only on success>\n</example>\n\n<example>\nContext: Ready to push and create PR\nuser: "Push this and open a PR"\nassistant: "I'll use gitops-devex to run pre-push gates, push, and create the PR."\n<gitops-devex runs full test suite, blocks force push, creates PR with structured description>\n</example>\n\n<example>\nContext: Review comments received\nuser: "There are review comments on the PR"\nassistant: "I'll use gitops-devex to classify and address the review comments."\n<gitops-devex classifies comments as actionable/escalate, auto-fixes actionable, asks human for tradeoffs>\n</example>tools: Bash, Glob, Grep, Read, Edit, Write, NotebookEdit, WebFetch, TodoWrite, WebSearch, BashOutput, KillShell, AskUserQuestion, Skill, SlashCommand, Task, mcp__github__add_comment_to_pending_review, mcp__github__add_issue_comment, mcp__github__assign_copilot_to_issue, mcp__github__create_branch, mcp__github__create_or_update_file, mcp__github__create_pull_request, mcp__github__create_repository, mcp__github__delete_file, mcp__github__fork_repository, mcp__github__get_commit, mcp__github__get_file_contents, mcp__github__get_label, mcp__github__get_latest_release, mcp__github__get_me, mcp__github__get_release_by_tag, mcp__github__get_tag, mcp__github__get_team_members, mcp__github__get_teams, mcp__github__issue_read, mcp__github__issue_write, mcp__github__list_branches, mcp__github__list_commits, mcp__github__list_issue_types, mcp__github__list_issues, mcp__github__list_pull_requests, mcp__github__list_releases, mcp__github__list_tags, mcp__github__merge_pull_request, mcp__github__pull_request_read, mcp__github__pull_request_review_write, mcp__github__push_files, mcp__github__request_copilot_review, mcp__github__search_code, mcp__github__search_issues, mcp__github__search_pull_requests, mcp__github__search_repositories, mcp__github__search_users, mcp__github__sub_issue_write, mcp__github__update_pull_request, mcp__github__update_pull_request_branch, ListMcpResourcesTool, ReadMcpResourceTool
 model: opus
 color: green
 ---

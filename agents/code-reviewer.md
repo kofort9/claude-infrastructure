@@ -1,39 +1,6 @@
 ---
 name: code-reviewer
-description: |
-  Use this agent when:
-  - A logical chunk of code has been written and needs review before proceeding
-  - Code changes have been made and quality validation is required
-  - A pull request needs review before merging
-  - Specific files or modules need quality assessment
-  - User explicitly requests code review or mentions checking code quality
-  - Security or performance concerns need investigation
-  - After implementing new features or fixing bugs to validate the changes
-
-  Integration with gitops-devex:
-  - Can be spawned by gitops-devex during /review-loop for automated PR reviews
-  - Output format compatible with /review-classify for actionable vs escalate decisions
-  - Supports both standalone reviews and review-loop integration
-
-  Examples:
-
-  Example 1:
-  user: "I just added authentication to the user service. Here's the code:"
-  assistant: "Let me review this authentication implementation using the code-reviewer agent to check for security vulnerabilities, proper error handling, and best practices."
-  <Uses Task tool to invoke code-reviewer agent>
-
-  Example 2:
-  user: "Can you write a function to process user uploads?"
-  assistant: "Here's the upload processing function:"
-  <function implementation>
-  assistant: "Now let me use the code-reviewer agent to review this code for security issues, input validation, and performance concerns before we proceed."
-  <Uses Task tool to invoke code-reviewer agent>
-
-  Example 3 (Review Loop Integration):
-  context: gitops-devex is running /review-loop and needs detailed review
-  gitops-devex: "Spawning code-reviewer for detailed analysis of PR #31"
-  <code-reviewer provides structured output for review-classify>
-tools: Glob, Grep, Read, WebFetch, TodoWrite, WebSearch, BashOutput, KillShell, ListMcpResourcesTool, ReadMcpResourceTool, AskUserQuestion, Skill, SlashCommand, mcp__github__pull_request_read, mcp__github__get_commit, mcp__github__get_file_contents, mcp__github__list_commits, mcp__github__list_pull_requests, mcp__github__search_code, mcp__github__add_comment_to_pending_review, mcp__github__pull_request_review_write
+description: Use this agent when:\n- A logical chunk of code has been written and needs review before proceeding\n- Code changes have been made and quality validation is required\n- A pull request needs review before merging\n- Specific files or modules need quality assessment\n- User explicitly requests code review or mentions checking code quality\n- Security or performance concerns need investigation\n- After implementing new features or fixing bugs to validate the changes\n\nIntegration with gitops-devex:\n- Can be spawned by gitops-devex during /review-loop for automated PR reviews\n- Output format compatible with /review-classify for actionable vs escalate decisions\n- Supports both standalone reviews and review-loop integration\n\nExamples:\n\nExample 1:\nuser: "I just added authentication to the user service. Here's the code:"\nassistant: "Let me review this authentication implementation using the code-reviewer agent to check for security vulnerabilities, proper error handling, and best practices."\n<Uses Task tool to invoke code-reviewer agent>\n\nExample 2:\nuser: "Can you write a function to process user uploads?"\nassistant: "Here's the upload processing function:"\n<function implementation>\nassistant: "Now let me use the code-reviewer agent to review this code for security issues, input validation, and performance concerns before we proceed."\n<Uses Task tool to invoke code-reviewer agent>\n\nExample 3 (Review Loop Integration):\ncontext: gitops-devex is running /review-loop and needs detailed review\ngitops-devex: "Spawning code-reviewer for detailed analysis of PR #31"\n<code-reviewer provides structured output for review-classify>tools: Glob, Grep, Read, WebFetch, TodoWrite, WebSearch, BashOutput, KillShell, ListMcpResourcesTool, ReadMcpResourceTool, AskUserQuestion, Skill, SlashCommand, mcp__github__pull_request_read, mcp__github__get_commit, mcp__github__get_file_contents, mcp__github__list_commits, mcp__github__list_pull_requests, mcp__github__search_code, mcp__github__add_comment_to_pending_review, mcp__github__pull_request_review_write
 model: sonnet
 color: red
 ---

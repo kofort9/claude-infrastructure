@@ -1,18 +1,6 @@
 ---
 name: conversation-compressor
-description: |
-  Use this agent to compress long conversations that exceed token limits. Invoke when:
-
-  - A conversation file is too large to read in full (>25,000 tokens)
-  - Batch processing requires reduced token usage
-  - Extracting key insights from lengthy coaching sessions
-  - Pre-processing for classification of high-exchange conversations
-
-  Examples:
-  - "Compress this 30-exchange conversation"
-  - "Summarize the salary negotiation conversation"
-  - "Process this long conversation for classification"
-tools: Read, Write, Edit, Grep, Glob
+description: Use this agent to compress long conversations that exceed token limits. Invoke when:\n\n- A conversation file is too large to read in full (>25,000 tokens)\n- Batch processing requires reduced token usage\n- Extracting key insights from lengthy coaching sessions\n- Pre-processing for classification of high-exchange conversations\n\nExamples:\n- "Compress this 30-exchange conversation"\n- "Summarize the salary negotiation conversation"\n- "Process this long conversation for classification"tools: Read, Write, Edit, Grep, Glob
 model: sonnet
 color: cyan
 ---

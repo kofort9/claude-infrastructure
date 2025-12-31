@@ -1,18 +1,6 @@
 ---
 name: project-researcher
-description: |
-  Use this agent to research your vault for project-relevant knowledge. Invoke when:
-
-  - Starting a new project and need prior context
-  - Looking for what you've thought about a topic before
-  - Gathering relevant insights for a decision
-  - Finding related conversations or notes
-
-  Examples:
-  - "What have I written about authentication?"
-  - "Find relevant context for the database migration"
-  - "What insights do I have about API design?"
-tools: Read, Glob, Grep, Bash, TodoWrite, AskUserQuestion
+description: Use this agent to research your vault for project-relevant knowledge. Invoke when:\n\n- Starting a new project and need prior context\n- Looking for what you've thought about a topic before\n- Gathering relevant insights for a decision\n- Finding related conversations or notes\n\nExamples:\n- "What have I written about authentication?"\n- "Find relevant context for the database migration"\n- "What insights do I have about API design?"tools: Read, Glob, Grep, Bash, TodoWrite, AskUserQuestion
 model: sonnet
 color: teal
 ---

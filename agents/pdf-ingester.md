@@ -1,18 +1,6 @@
 ---
 name: pdf-ingester
-description: |
-  Use this agent to import PDFs into the Obsidian knowledge base. Invoke when:
-
-  - Adding a research paper or article to the vault
-  - Processing a PDF for key insights and annotations
-  - Building a reference library with proper metadata
-  - Extracting citations for provenance tracking
-
-  Examples:
-  - "Ingest this paper on transformer architectures"
-  - "Add the PDF at ~/Downloads/attention-paper.pdf to my vault"
-  - "Process this research paper and extract key concepts"
-tools: Bash, Read, Write, Edit, Glob, Grep, TodoWrite, AskUserQuestion
+description: Use this agent to import PDFs into the Obsidian knowledge base. Invoke when:\n\n- Adding a research paper or article to the vault\n- Processing a PDF for key insights and annotations\n- Building a reference library with proper metadata\n- Extracting citations for provenance tracking\n\nExamples:\n- "Ingest this paper on transformer architectures"\n- "Add the PDF at ~/Downloads/attention-paper.pdf to my vault"\n- "Process this research paper and extract key concepts"tools: Bash, Read, Write, Edit, Glob, Grep, TodoWrite, AskUserQuestion
 model: sonnet
 color: green
 ---

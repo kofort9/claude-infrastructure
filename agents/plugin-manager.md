@@ -1,19 +1,6 @@
 ---
 name: plugin-manager
-description: |
-  Use this agent to manage Claude Code plugin repositories. Invoke when:
-
-  - A new agent, skill, or command has been created in ~/.claude/
-  - You need to sync components between global config and plugin repos
-  - Classifying whether a component is personal or portable/public
-  - Updating plugin repos after creating new components
-
-  Examples:
-  - "I just created a new agent, add it to the right plugin"
-  - "Sync my recent changes to the plugin repos"
-  - "Which repo should this new skill go in?"
-  - "Update claude-devtools with my latest agents"
-tools: Bash, Read, Write, Edit, Glob, Grep, TodoWrite, AskUserQuestion
+description: Use this agent to manage Claude Code plugin repositories. Invoke when:\n\n- A new agent, skill, or command has been created in ~/.claude/\n- You need to sync components between global config and plugin repos\n- Classifying whether a component is personal or portable/public\n- Updating plugin repos after creating new components\n\nExamples:\n- "I just created a new agent, add it to the right plugin"\n- "Sync my recent changes to the plugin repos"\n- "Which repo should this new skill go in?"\n- "Update claude-devtools with my latest agents"tools: Bash, Read, Write, Edit, Glob, Grep, TodoWrite, AskUserQuestion
 model: haiku
 color: cyan
 ---

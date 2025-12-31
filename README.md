@@ -49,11 +49,11 @@ Reusable capabilities that agents can reference. Provide:
 
 | Agent | Model | Purpose |
 |-------|-------|---------|
-| **code-reviewer** | sonnet | A logical chunk of code has been written and needs revi |
-| **concept-linker** | haiku | build and maintain the concept graph. |
+| **code-reviewer** | sonnet | \n- A logical chunk of code has been written and needs  |
+| **concept-linker** | haiku | build and maintain the concept graph. Invoke when ident |
 | **conversation-compressor** | sonnet | compress long conversations that exceed token limits. |
 | **gitops-devex** | opus | Unified Git workflow authority with worktree-based work |
-| **insight-extractor** | sonnet | extract and structure insights from conversations and s |
+| **insight-extractor** | sonnet | extract insights from conversations and sources. Invoke |
 | **knowledge-citadel** | sonnet | Utility agent for knowledge base retrieval. Returns sum |
 | **ml-specialist** | opus | Reviews ML/statistical approaches in pattern systems -  |
 | **orchestrator** | opus | A new task arrives that needs to be routed to the appro |
@@ -61,11 +61,11 @@ Reusable capabilities that agents can reference. Provide:
 | **pdf-ingester** | sonnet | import PDFs into the Obsidian knowledge base. |
 | **plugin-manager** | haiku | manage Claude Code plugin repositories. |
 | **project-researcher** | sonnet | research your vault for project-relevant knowledge. |
-| **repo-topology** | sonnet | trace dependency graphs, or identify architectural patt |
+| **repo-topology** | ? | you need to understand codebase structure, map module r |
 | **scout** | sonnet | Reconnaissance agent for content triage and routing. Us |
 | **system-admin** | sonnet | Use this agent for complex system projects, script deve |
 | **system-ops** | sonnet | Use this agent for quick local machine operations and d |
-| **tech-writer** | sonnet | Creating or updating README files, API docs, architectu |
+| **tech-writer** | sonnet | documentation needs to be created, reviewed, or updated |
 | **web-clipper** | sonnet | save web content to the Obsidian vault. |
 
 ### Skills (21)

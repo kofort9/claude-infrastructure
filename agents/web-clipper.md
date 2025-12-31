@@ -1,18 +1,6 @@
 ---
 name: web-clipper
-description: |
-  Use this agent to save web content to the Obsidian vault. Invoke when:
-
-  - Saving an article or blog post for reference
-  - Clipping documentation for offline access
-  - Capturing web content with proper source attribution
-  - Building a reference library from online sources
-
-  Examples:
-  - "Save this article to my vault: [URL]"
-  - "Clip this documentation page"
-  - "Add this blog post to my sources"
-tools: WebFetch, Bash, Read, Write, Edit, Glob, Grep, TodoWrite, AskUserQuestion
+description: Use this agent to save web content to the Obsidian vault. Invoke when:\n\n- Saving an article or blog post for reference\n- Clipping documentation for offline access\n- Capturing web content with proper source attribution\n- Building a reference library from online sources\n\nExamples:\n- "Save this article to my vault: [URL]"\n- "Clip this documentation page"\n- "Add this blog post to my sources"tools: WebFetch, Bash, Read, Write, Edit, Glob, Grep, TodoWrite, AskUserQuestion
 model: sonnet
 color: cyan
 ---

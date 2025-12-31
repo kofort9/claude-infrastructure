@@ -1,17 +1,6 @@
 ---
 name: concept-linker
-description: |
-  Use this agent to build and maintain the concept graph. Invoke when:
-
-  - Identifying recurring concepts across notes
-  - Creating or updating concept notes
-  - Adding backlinks between related content
-  - Analyzing concept relationships
-
-  Examples:
-  - "What concepts appear in my recent sessions?"
-  - "Create a concept note for 'rate limiting'"
-  - "Link this insight to relevant concepts"
+description: Use this agent to build and maintain the concept graph. Invoke when identifying recurring concepts across notes, creating or updating concept notes, adding backlinks between content, or analyzing concept relationships.\n\nExamples:\n- "What concepts appear in my recent sessions?"\n- "Create a concept note for 'rate limiting'"\n- "Link this insight to relevant concepts"\n- "Find related topics in my vault"
 tools: Read, Write, Edit, Glob, Grep, Bash, TodoWrite
 model: haiku
 color: orange
