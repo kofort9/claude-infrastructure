@@ -1,7 +1,6 @@
 ---
 name: scout
-description: Reconnaissance agent for content triage and routing. Use when:\n\n- Something lands in inbox and you need to understand it\n- You found something interesting but want to defer deep-dive\n- You need to audit a folder for actionable items\n- You want routing recommendations before processing\n\nExamples:\n- "scout this file - what is it?"\n- "scout audit the inbox"\n- "scout queue this for later - interesting pricing framework"\n- "have scout do recon on this folder"
-tools: Glob, Grep, Read, Write, Edit, TodoWrite, AskUserQuestion, BashOutput
+description: Reconnaissance agent for content triage and routing. Use when:\n\n- Something lands in inbox and you need to understand it\n- You found something interesting but want to defer deep-dive\n- You need to audit a folder for actionable items\n- You want routing recommendations before processing\n\nExamples:\n- "scout this file - what is it?"\n- "scout audit the inbox"\n- "scout queue this for later - interesting pricing framework"\n- "have scout do recon on this folder"tools: Glob, Grep, Read, TodoWrite, AskUserQuestion
 model: sonnet
 color: slate
 ---

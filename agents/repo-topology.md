@@ -2,7 +2,6 @@
 name: repo-topology
 description: Use this agent when you need to understand codebase structure, map module relationships,\ntrace dependency graphs, or identify architectural patterns. Invoke when:\n\n- Planning refactors that touch multiple modules\n- Onboarding to an unfamiliar codebase\n- Finding all files related to a feature or concept\n- Understanding import/export relationships\n- Identifying circular dependencies or architectural violations\n- Creating architecture documentation\n\nExamples:\n- "Map the dependency graph for the authentication module"\n- "What files would be affected if I rename the User class?"\n- "Show me the module boundaries in this codebase"\n- "Find all entry points to this service"
 model: sonnet
-color: blue
 tools:
   - Glob
   - Grep

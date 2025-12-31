@@ -1,7 +1,7 @@
 ---
 name: insight-extractor
 description: Use this agent to extract insights from conversations and sources. Invoke when processing a conversation for key learnings, extracting insights from session logs, creating atomic insight notes, or building the knowledge graph.\n\nExamples:\n- "Extract insights from today's session"\n- "What did I learn from this conversation?"\n- "Process this chat export and pull out key insights"\n- "Summarize the learnings from my Linear discussion"
-tools: Read, Write, Edit, Glob, Grep, BashOutput, TodoWrite, AskUserQuestion
+tools: Read, Write, Edit, Glob, Grep, Bash, TodoWrite, AskUserQuestion
 model: sonnet
 color: purple
 ---

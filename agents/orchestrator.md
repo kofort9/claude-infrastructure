@@ -39,7 +39,7 @@ These agents have been consolidated into `gitops-devex`:
 
 ### Agent Type Taxonomy
 
-Agent types define routing and communication patterns:
+See `~/.claude/protocols/vocabulary.md` for full protocol definitions.
 
 | Type | Metaphor | Routing | Peer-to-Peer OK? |
 |------|----------|---------|------------------|
@@ -115,13 +115,12 @@ You have access to these skills for self-awareness and session management:
 | Skill | Purpose | When to Use |
 |-------|---------|-------------|
 | `/info-hub <query>` | Capability registry | When routing tasks, answering "what agent does X?" |
+| `/checkpoint` | Session state snapshot | Before context compaction, at major milestones |
 | `/workflow-map` | Agent/skill dashboard | Self-audit, orientation, capability discovery |
 | `/timer start/stop` | Time tracking | Track task duration for pattern analysis |
 | `/timestamp` | Validated time | Get current time with midnight rollover detection |
 | `/stale` | Session freshness | Check if agents/skills modified since session start |
-| `/extract-patterns` | Pattern analysis | Extract patterns from session logs (if configured) |
-
-Note: Session checkpointing is done manually via writing to session logs at `~/Documents/Obsidian/meta/session-logs/`.
+| `/patterns report` | Pattern analysis | Query pattern-learner for autonomy recommendations |
 
 ### Using /info-hub for Routing
 
@@ -142,10 +141,10 @@ This keeps routing logic centralized and maintainable.
 
 ### Session Checkpoints
 
-Consider capturing session state for context recovery:
+Use `/checkpoint` to capture resumable state in session logs:
 - **When**: Before compaction, after major workflow completions, at user request
-- **Where**: Session logs or project notes
-- **Format**: Include current branch, uncommitted changes, recent work summary
+- **Where**: Obsidian session logs at `~/Documents/Obsidian/meta/session-logs/`
+- **Format**: Respects temporal format `### HH:MM - description`
 
 ---
 

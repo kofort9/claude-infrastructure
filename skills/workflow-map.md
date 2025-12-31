@@ -211,16 +211,20 @@ echo "Run /workflow-map --scope all to include personal/knowledge agents"
 
 AGENTS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  orchestrator              opus     ✅     cyan
+  orchestrator              opus     ✅     blue
   gitops-devex              opus     ✅     green
-  code-reviewer             sonnet   ✅     red
+  code-reviewer             sonnet   ✅     yellow
   tech-writer               sonnet   ✅     purple
   system-admin              sonnet   ✅     orange
-  system-ops                sonnet   ✅     yellow
-  repo-topology             sonnet   ✅     -
+  system-ops                sonnet   ✅     orange
+  doc-quality-reviewer      ?        ⚠️ no model
+  repo-topology             ?        ⚠️ no model
   plugin-manager            haiku    ✅     cyan
-  knowledge-citadel         sonnet   ✅     amber
-  scout                     sonnet   ✅     slate
+
+ARCHIVED AGENTS
+───────────────
+  ❌ git-workflow-guardian
+  ❌ pre-push-guardian
 
 SKILLS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -238,13 +242,12 @@ SKILLS
 
 COMMANDS (User Entry Points)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  /afk                      AFK return - shows time gap, runs stale check
-  /document                 Documentation tasks using multi-agent workflow
-  /extract-patterns         Extract patterns from session logs
-  /surface-patterns         Surface relevant patterns for context
-  /timer                    Time tracking for tasks
-  /timestamp                Validated timestamps with rollover detection
-  /stale                    Check if agents/skills modified since session
+  /backlog                  Add tasks to backlog
+  /document                 Documentation tasks
+  /inbox                    Manage task inbox
+  /log                      Add log entries
+  /status                   Get project status
+  /sweep                    Sync plugins or clean up
 ```
 
 ## When to Use
