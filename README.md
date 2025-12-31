@@ -45,15 +45,19 @@ Reusable capabilities that agents can reference. Provide:
 <!-- COMPONENTS:START - Auto-generated, do not edit manually -->
 ## Components
 
-### Agents (14)
+### Agents (18)
 
 | Agent | Model | Purpose |
 |-------|-------|---------|
 | **code-reviewer** | sonnet | A logical chunk of code has been written and needs revi |
+| **concept-linker** | haiku | build and maintain the concept graph. |
 | **conversation-compressor** | sonnet | compress long conversations that exceed token limits. |
 | **gitops-devex** | opus | Unified Git workflow authority with worktree-based work |
+| **insight-extractor** | sonnet | extract and structure insights from conversations and s |
+| **knowledge-citadel** | sonnet | Utility agent for knowledge base retrieval. Returns sum |
 | **ml-specialist** | opus | Reviews ML/statistical approaches in pattern systems -  |
 | **orchestrator** | opus | A new task arrives that needs to be routed to the appro |
+| **pattern-learner** | opus | Observes decisions across all domains, learns system pa |
 | **pdf-ingester** | sonnet | import PDFs into the Obsidian knowledge base. |
 | **plugin-manager** | haiku | manage Claude Code plugin repositories. |
 | **project-researcher** | sonnet | research your vault for project-relevant knowledge. |
@@ -90,12 +94,22 @@ Reusable capabilities that agents can reference. Provide:
 | /worktree-create | Create an isolated git worktree for a new feature/fix.  |
 | /worktree-list | Show all active git worktrees with their status (branch |
 
-### Commands (4)
+### Commands (14)
 
 | Command | Purpose |
 |---------|---------|
+| /afk | AFK return command - shows time gap, runs stale check,  |
+| /chatgpt-single | Capture ChatGPT share conversations via Playwright. Sav |
+| /claude-web | Capture Claude.ai share conversations via Playwright. S |
 | /document | Create or update repository documentation using multi-a |
+| /extract-patterns | "Extract patterns from session logs (auto or deep mode) |
+| /gemini | Capture Gemini AI share conversations via Playwright. S |
+| /patterns-improve | "Review and apply improvement suggestions from pattern  |
+| /patterns-recurrence | "View pattern recurrence clusters and escalation status |
+| /patterns-verify | "Check verification status of applied pattern fixes" |
+| /perplexity | Capture Perplexity AI search/chat shares via Playwright |
 | /stale | Check if agents/skills modified since session start, re |
+| /surface-patterns | "Surface relevant patterns for current context" |
 | /timer | Timer Skill |
 | /timestamp | Timestamp Validation Skill |
 
