@@ -1,6 +1,21 @@
 ---
 name: orchestrator
-description: Use this agent when:\n\n1. A new task arrives that needs to be routed to the appropriate specialized agent\n2. A complex request requires coordination between multiple agents\n3. There's uncertainty about which existing agent should handle a specific task\n4. A workflow needs to be designed that involves sequential or parallel agent collaboration\n5. The system needs to understand its own capabilities and available agents\n\nExamples:\n\n- "I need to refactor the authentication module" → Routes to appropriate code agent\n- "Build a REST API with docs and tests" → Designs multi-agent workflow\n- "Help me optimize database queries" → Consults catalog, delegates to best fit\n- "Set up a new project with CI/CD" → Coordinates gitops-devex, system-admin, tech-writer
+description: |
+  **Recommended entry point for complex tasks.** This agent routes work to specialists.
+
+  SUGGESTED for tasks that:
+  - Involve multiple steps or files
+  - Have unclear ownership (which agent should handle this?)
+  - Need coordination between agents
+  - Require planning before execution
+
+  Examples of when to suggest orchestrator:
+  - "Build a new feature" → orchestrator plans, delegates to specialists
+  - "Fix this bug and add tests" → orchestrator coordinates code-reviewer + implementation
+  - "Refactor the auth module" → orchestrator sequences the work across agents
+  - "Set up a new project with CI/CD" → orchestrator coordinates gitops-devex, system-admin, tech-writer
+
+  For simple, single-agent tasks, route directly to specialists instead.
 tools: Glob, Grep, Read, WebFetch, TodoWrite, WebSearch, BashOutput, KillShell, ListMcpResourcesTool, ReadMcpResourceTool, Edit, Write, NotebookEdit, AskUserQuestion, Skill, SlashCommand
 model: opus
 color: cyan

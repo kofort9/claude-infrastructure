@@ -43,19 +43,15 @@ Reusable capabilities that agents can reference. Provide:
 <!-- COMPONENTS:START - Auto-generated, do not edit manually -->
 ## Components
 
-### Agents (18)
+### Agents (14)
 
 | Agent | Model | Purpose |
 |-------|-------|---------|
-| **code-reviewer** | sonnet | \n- A logical chunk of code has been written and needs review before proceeding\ |
-| **concept-linker** | haiku | build and maintain the concept graph. Invoke when identifying recurring concepts |
+| **code-reviewer** | sonnet | **Proactive code quality specialist.** Invoke automatically after writing signif |
 | **conversation-compressor** | sonnet | compress long conversations that exceed token limits. |
 | **gitops-devex** | opus | Unified Git workflow authority with worktree-based workspace isolation. This is  |
-| **insight-extractor** | sonnet | extract insights from conversations and sources. Invoke when processing a conver |
-| **knowledge-citadel** | sonnet | Utility agent for knowledge base retrieval. Returns summaries + file paths. No r |
 | **ml-specialist** | opus | Reviews ML/statistical approaches in pattern systems - similarity algorithms, gr |
-| **orchestrator** | opus | A new task arrives that needs to be routed to the appropriate specialized agent |
-| **pattern-learner** | opus | Observes decisions across all domains, learns system patterns, tracks metrics, a |
+| **orchestrator** | opus | **Recommended entry point for complex tasks.** This agent routes work to special |
 | **pdf-ingester** | sonnet | import PDFs into the Obsidian knowledge base. |
 | **plugin-manager** | haiku | manage Claude Code plugin repositories. |
 | **project-researcher** | sonnet | research your vault for project-relevant knowledge. |
