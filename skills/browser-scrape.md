@@ -42,8 +42,8 @@ chmod +x /Users/you/bin/npx-wrapper
 ```
 
 **Examples:**
-- `/browser-scrape https://linear.app/kaxfhq/inbox activity` - Linear activity feed
-- `/browser-scrape https://linear.app/kaxfhq/my-issues table` - Issues table
+- `/browser-scrape https://linear.app/yourworkspace/inbox activity` - Linear activity feed
+- `/browser-scrape https://linear.app/yourworkspace/my-issues table` - Issues table
 - `/browser-scrape https://github.com/user/repo/pulse content` - GitHub pulse
 
 ## Primary Use Case: Linear Pulse Updates
@@ -58,7 +58,7 @@ Linear's API exposes issues and documents, but NOT:
 
 1. **Navigate to Linear inbox/activity:**
 ```
-mcp__playwright__browser_navigate url="https://linear.app/kaxfhq/inbox"
+mcp__playwright__browser_navigate url="https://linear.app/yourworkspace/inbox"
 ```
 
 2. **Wait for auth (if needed):**
@@ -125,7 +125,7 @@ Save extracted data with provenance:
 ```markdown
 ---
 source: browser-scrape
-url: https://linear.app/kaxfhq/inbox
+url: https://linear.app/yourworkspace/inbox
 captured: 2025-12-22T20:00:00Z
 extraction_type: activity
 ---
@@ -136,8 +136,8 @@ extraction_type: activity
 
 | Time | Activity |
 |------|----------|
-| 2h ago | Kofi completed KHQ-75: Skills infrastructure |
-| 3h ago | Kofi moved KHQ-71 to Done |
+| 2h ago | User completed PRJ-123: Feature implementation |
+| 3h ago | User moved PRJ-456 to Done |
 | ... | ... |
 
 ---
