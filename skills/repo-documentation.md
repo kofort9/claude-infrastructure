@@ -236,16 +236,16 @@ generated_by: tech-writer
 
 ### Phase 1: ANALYSIS (Parallel)
 
-Run these agents simultaneously to gather context:
+Gather context using available tools and agents:
 
-#### Code Analysis (use: backend agent or code-reviewer)
+#### Code Analysis (use: code-reviewer or repo-topology)
 **Questions to answer**:
 - What changed in behavior, inputs, outputs, and error handling?
 - Which public functions/classes are user-facing?
 - What are the side effects and external dependencies?
 - What validation or constraints exist?
 
-#### Usage Pattern Extraction (use: QA/testing agent)
+#### Usage Pattern Extraction (analyze tests directly)
 **Questions to answer**:
 - What test scenarios exist for this feature?
 - What edge cases are handled?
@@ -279,7 +279,7 @@ Run quality checks simultaneously:
 - Code blocks have language tags
 - Internal links are valid
 
-#### Example Verification (use: QA agent)
+#### Example Verification (use: code-reviewer or manual testing)
 **Check**:
 - Code examples are syntactically correct
 - Examples match current API signatures
@@ -357,8 +357,8 @@ Documentation must pass these gates before completion:
 ## Tools Used
 
 - **Discovery**: Glob (find docs), Grep (search content), Read (examine files)
-- **Analysis**: Backend agent (code structure), QA agent (test patterns)
-- **Validation**: code-reviewer (quality), QA agent (example verification)
+- **Analysis**: code-reviewer or repo-topology (code structure), test file analysis (patterns)
+- **Validation**: code-reviewer (quality and example verification)
 - **Output**: Write, Edit (create/modify documentation files)
 
 ---
@@ -369,29 +369,29 @@ Documentation must pass these gates before completion:
 
 **Phase 1 (Parallel)**:
 ```
-[Backend Agent]: Extract bulk_log tool schema, parameters, validation rules
-[QA Agent]: Find test scenarios in src/__tests__/bulk-log.test.ts
-[Tech-writer]: Scan docs/ for existing bulk logging mentions
+[repo-topology]: Extract bulk_log tool schema, parameters, validation rules
+[code-reviewer]: Find test scenarios in src/__tests__/bulk-log.test.ts
+[tech-writer]: Scan docs/ for existing bulk logging mentions
 ```
 
 **Phase 2**:
 ```
-[Tech-writer]: Draft API reference with:
-- Tool signature from backend agent
-- Examples from QA agent test scenarios
+[tech-writer]: Draft API reference with:
+- Tool signature from repo-topology analysis
+- Examples from test scenario analysis
 - Cross-references from doc scan
 - Minimal metadata header
 ```
 
 **Phase 3 (Parallel)**:
 ```
-[Code-reviewer]: Validate style, formatting, link integrity
-[QA Agent]: Verify examples match actual API behavior
+[code-reviewer]: Validate style, formatting, link integrity
+[code-reviewer]: Verify examples match actual API behavior
 ```
 
 **Phase 4**:
 ```
-[Tech-writer]:
+[tech-writer]:
 - Address review feedback
 - Add to docs/README.md index
 - Update last_updated date
@@ -406,14 +406,14 @@ Documentation must pass these gates before completion:
 
 **Phase 1 (Parallel)**:
 ```
-[QA Agent]: Extract test findings, failure patterns, edge cases discovered
-[Backend Agent]: Identify code issues, missing instrumentation, API errors
-[Tech-writer]: Gather decisions made during testing, previous related docs
+[code-reviewer]: Extract test findings, failure patterns, edge cases discovered
+[repo-topology]: Identify code issues, missing instrumentation, API errors
+[tech-writer]: Gather decisions made during testing, previous related docs
 ```
 
 **Phase 2**:
 ```
-[Tech-writer]: Draft case study with:
+[tech-writer]: Draft case study with:
 - Executive summary from consolidated findings
 - Methodology from test session structure
 - Detailed findings organized by category
@@ -423,13 +423,13 @@ Documentation must pass these gates before completion:
 
 **Phase 3**:
 ```
-[Code-reviewer]: Validate technical accuracy of findings
-[QA Agent]: Confirm edge cases and failure patterns are correctly described
+[code-reviewer]: Validate technical accuracy of findings
+[code-reviewer]: Confirm edge cases and failure patterns are correctly described
 ```
 
 **Phase 4**:
 ```
-[Tech-writer]:
+[tech-writer]:
 - Name file with date: docs/case-studies/YYYY-MM-DD-descriptive-slug.md
 - Add to docs/README.md under Case Studies section
 - Cross-reference from related feature docs

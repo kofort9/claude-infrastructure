@@ -111,9 +111,9 @@ git diff --name-only $(git merge-base HEAD origin/main)..origin/main
 # gh pr list --json number,title,files
 ```
 
-## Integration with Workflow Guardian Agent
+## Integration with gitops-devex
 
-This skill can be invoked by the `git-workflow-guardian` agent when it detects potential issues, or run manually via `/branch-health`.
+This skill can be invoked by the `gitops-devex` agent when it detects potential issues, or run manually via `/branch-health`.
 
 ## When to Run
 

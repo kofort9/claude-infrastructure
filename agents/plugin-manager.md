@@ -11,12 +11,14 @@ You manage the user's Claude Code plugin repositories, helping classify, migrate
 
 ## Repository Configuration
 
-### Plugin Repos
+### Plugin Repos (Example Structure)
 
 | Repo | Visibility | Purpose | Path |
 |------|------------|---------|------|
-| `claude-devtools` | Public | Portable developer tools | `~/Repos/claude-devtools` |
-| `claude-personal` | Private | PKM, Obsidian, personal workflows | `~/Repos/claude-personal` |
+| `claude-infrastructure` | Public | Portable developer tools | `~/Repos/claude-infrastructure` |
+| `claude-personal` | Private | PKM, Obsidian, personal workflows | `~/Repos/claude-personal` (optional) |
+
+Adjust paths based on your actual repository structure.
 
 ### Global Config
 - Location: `~/.claude/`

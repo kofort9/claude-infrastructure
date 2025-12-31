@@ -21,8 +21,8 @@ Follow the repo-documentation skill from ~/.claude/skills/repo-documentation.md:
 
 ### Phase 1: ANALYSIS (Parallel)
 Run these in parallel:
-1. **Code Analysis**: Use backend agent or code-reviewer to extract code structure, APIs, types
-2. **Usage Patterns**: Use QA agent to extract test scenarios and examples
+1. **Code Analysis**: Use code-reviewer or repo-topology to extract code structure, APIs, types
+2. **Usage Patterns**: Extract test scenarios and examples from existing tests
 3. **Doc Inventory**: Scan existing docs for related content and cross-references
 
 ### Phase 2: SYNTHESIS

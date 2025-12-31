@@ -211,20 +211,16 @@ echo "Run /workflow-map --scope all to include personal/knowledge agents"
 
 AGENTS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  orchestrator              opus     ✅     blue
+  orchestrator              opus     ✅     cyan
   gitops-devex              opus     ✅     green
-  code-reviewer             sonnet   ✅     yellow
+  code-reviewer             sonnet   ✅     red
   tech-writer               sonnet   ✅     purple
   system-admin              sonnet   ✅     orange
-  system-ops                sonnet   ✅     orange
-  doc-quality-reviewer      ?        ⚠️ no model
-  repo-topology             ?        ⚠️ no model
+  system-ops                sonnet   ✅     yellow
+  repo-topology             sonnet   ✅     -
   plugin-manager            haiku    ✅     cyan
-
-ARCHIVED AGENTS
-───────────────
-  ❌ git-workflow-guardian
-  ❌ pre-push-guardian
+  knowledge-citadel         sonnet   ✅     amber
+  scout                     sonnet   ✅     slate
 
 SKILLS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -242,12 +238,13 @@ SKILLS
 
 COMMANDS (User Entry Points)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  /backlog                  Add tasks to backlog
-  /document                 Documentation tasks
-  /inbox                    Manage task inbox
-  /log                      Add log entries
-  /status                   Get project status
-  /sweep                    Sync plugins or clean up
+  /afk                      AFK return - shows time gap, runs stale check
+  /document                 Documentation tasks using multi-agent workflow
+  /extract-patterns         Extract patterns from session logs
+  /surface-patterns         Surface relevant patterns for context
+  /timer                    Time tracking for tasks
+  /timestamp                Validated timestamps with rollover detection
+  /stale                    Check if agents/skills modified since session
 ```
 
 ## When to Use

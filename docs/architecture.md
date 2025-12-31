@@ -4,19 +4,31 @@ How the Claude Code infrastructure components work together.
 
 ## Component Hierarchy
 
+This repository contains shareable components:
+
+```
+claude-infrastructure/
+├── agents/          # Specialized agent definitions
+├── commands/        # Slash commands
+├── skills/          # Reusable capabilities
+└── docs/            # Documentation
+```
+
+When installed to `~/.claude/`, you can add private components:
+
 ```
 ~/.claude/
-├── agents/          # Specialized agent definitions
-│   ├── public/      # Shareable agents
-│   └── private/     # Personal/project-specific
-├── commands/        # Slash commands
-│   ├── public/      # General-purpose
-│   └── p/           # Private workflows
-├── skills/          # Reusable capabilities
-├── hooks/           # Event-driven automation
-├── patterns/        # Pattern learning system
-├── scripts/         # Automation scripts
-├── configs/         # Configuration files
+├── agents/
+│   ├── public/      # From this repo
+│   └── private/     # Your personal agents
+├── commands/
+│   ├── public/      # From this repo
+│   └── p/           # Your private commands
+├── skills/
+│   ├── public/      # From this repo
+│   └── p/           # Your private skills
+├── hooks/           # Your event automation (optional)
+├── scripts/         # Your automation scripts (optional)
 └── settings.json    # Claude Code settings
 ```
 
@@ -103,6 +115,10 @@ Hooks trigger on Claude Code events:
 - `PreToolUse` - Before a tool executes
 - `PostToolUse` - After a tool executes
 - `UserPromptSubmit` - When user sends a message
+- `SubagentStop` - When a subagent completes
+- `Stop` - When the main agent stops
+- `PreCompact` - Before context compaction
+- `Notification` - For system notifications
 
 ## Data Flow
 

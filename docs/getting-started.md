@@ -13,7 +13,7 @@ How to use this Claude Code infrastructure in your own setup.
 
 ```bash
 # Clone the repo
-git clone https://github.com/youruser/claude-infrastructure.git
+git clone https://github.com/yourusername/claude-infrastructure.git
 cd claude-infrastructure
 
 # Copy agents you want
@@ -50,6 +50,8 @@ After installation:
 ├── skills/
 │   ├── public/           # Shareable skills
 │   └── p/                # Private skills
+├── hooks/                # Event-driven automation (optional)
+├── scripts/              # Shell/Python automation (optional)
 └── settings.json
 ```
 

@@ -76,6 +76,16 @@ After (loose coupling via info-hub):
 | Complex system projects | `system-admin` | Build scripts, audits |
 | Environment setup | `system-admin` | Configuration management |
 
+### Knowledge System
+
+| Capability | Agent | Notes |
+|------------|-------|-------|
+| Knowledge retrieval | `knowledge-citadel` | LOOKUP from Obsidian vault (insights, concepts, sources) |
+| Content triage | `scout` | Recon, classification, routing recommendations |
+| Insight extraction | `insight-extractor` | Extract atomic insights with provenance |
+| Concept linking | `concept-linker` | Build/maintain concept graph |
+| Pattern learning | `pattern-learner` | Track decisions, suggest automation |
+
 ### Orchestration & Meta
 
 | Capability | Agent | Notes |
@@ -83,7 +93,7 @@ After (loose coupling via info-hub):
 | Task routing | `orchestrator` | Multi-agent coordination |
 | Capability queries | `orchestrator` | Uses this skill |
 | Workflow design | `orchestrator` | Sequential/parallel patterns |
-| Session checkpoints | `orchestrator` | Uses /checkpoint skill |
+| Session checkpoints | `orchestrator` | Via /checkpoint command (when available) |
 | Agent audit | `orchestrator` | Uses /workflow-map skill |
 
 ## Response Format

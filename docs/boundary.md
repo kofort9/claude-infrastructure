@@ -92,10 +92,11 @@ git commit -m "feature: add new capability"
 
 ## Sync Automation
 
-The `sync-agents-hook.sh` script:
-1. Copies `public/` directories only
-2. Sanitizes personal paths
-3. Validates no secrets
-4. Commits to public repo
+If you maintain both private and public repos, consider a sync workflow:
 
-Run on `SessionEnd` hook for automatic sync.
+1. **Copy `public/` directories only** - Don't expose private components
+2. **Sanitize personal paths** - Replace `/Users/yourname/` with generic paths
+3. **Validate no secrets** - Check for API keys, tokens, credentials
+4. **Commit to public repo** - Keep versions in sync
+
+You can automate this with a `SessionEnd` hook or run manually.

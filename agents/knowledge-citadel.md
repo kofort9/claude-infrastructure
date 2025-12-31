@@ -2,12 +2,8 @@
 name: knowledge-citadel
 description: Utility agent for knowledge base retrieval. Returns summaries + file paths. No reasoning, no speculation - librarian behavior only.
 model: sonnet
-tools:
-  - Glob
-  - Grep
-  - Read
-  - TodoWrite
 color: amber
+tools: Glob, Grep, Read, TodoWrite
 ---
 
 # Knowledge Citadel Agent

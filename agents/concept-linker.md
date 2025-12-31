@@ -59,6 +59,7 @@ aliases: [alternative names]
 
 *Patterns discovered through use:*
 
-- Common concept categories
-- Linking patterns
-- Concept hierarchies
+- **Common concept categories**: Technical patterns, personal development, project domains
+- **Linking patterns**: Prefer bidirectional links; concepts should link to top 5-7 most related insights
+- **Concept hierarchies**: Use parent/child relationships for broad vs. specific concepts (e.g., "programming" -> "functional programming" -> "monads")
+- **Naming conventions**: Use lowercase-with-hyphens for concept filenames

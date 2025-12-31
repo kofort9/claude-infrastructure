@@ -67,7 +67,7 @@ Patterns stored in JSONL format:
   "id": "domain:name:date",
   "domain": "workflow|architecture|security|discovery",
   "pattern_type": "success|correction|novel|principle",
-  "timestamp": "2024-01-15T10:30:00Z",
+  "timestamp": "2025-01-15T10:30:00Z",
   "observation": "Description of what happened",
   "context": "Where this occurred",
   "confidence": 0.85,

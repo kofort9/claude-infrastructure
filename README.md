@@ -40,8 +40,6 @@ Reusable capabilities that agents can reference. Provide:
 - Workflow patterns
 - Best practices
 
-## Components
-
 <!-- COMPONENTS:START - Auto-generated, do not edit manually -->
 ## Components
 
@@ -49,69 +47,69 @@ Reusable capabilities that agents can reference. Provide:
 
 | Agent | Model | Purpose |
 |-------|-------|---------|
-| **code-reviewer** | sonnet | \n- A logical chunk of code has been written and needs  |
-| **concept-linker** | haiku | build and maintain the concept graph. Invoke when ident |
-| **conversation-compressor** | sonnet | compress long conversations that exceed token limits. |
-| **gitops-devex** | opus | Unified Git workflow authority with worktree-based work |
-| **insight-extractor** | sonnet | extract insights from conversations and sources. Invoke |
-| **knowledge-citadel** | sonnet | Utility agent for knowledge base retrieval. Returns sum |
-| **ml-specialist** | opus | Reviews ML/statistical approaches in pattern systems -  |
-| **orchestrator** | opus | A new task arrives that needs to be routed to the appro |
-| **pattern-learner** | opus | Observes decisions across all domains, learns system pa |
-| **pdf-ingester** | sonnet | import PDFs into the Obsidian knowledge base. |
-| **plugin-manager** | haiku | manage Claude Code plugin repositories. |
-| **project-researcher** | sonnet | research your vault for project-relevant knowledge. |
-| **repo-topology** | ? | you need to understand codebase structure, map module r |
-| **scout** | sonnet | Reconnaissance agent for content triage and routing. Us |
-| **system-admin** | sonnet | Use this agent for complex system projects, script deve |
-| **system-ops** | sonnet | Use this agent for quick local machine operations and d |
-| **tech-writer** | sonnet | documentation needs to be created, reviewed, or updated |
-| **web-clipper** | sonnet | save web content to the Obsidian vault. |
+| **code-reviewer** | sonnet | Code review and quality validation before commits, PRs, or merging |
+| **concept-linker** | haiku | Build and maintain the concept graph, link insights to concepts |
+| **conversation-compressor** | sonnet | Compress long conversations that exceed token limits |
+| **gitops-devex** | opus | Unified Git workflow authority with worktree-based workspace isolation |
+| **insight-extractor** | sonnet | Extract insights from conversations and sources with provenance tracking |
+| **knowledge-citadel** | sonnet | Utility agent for knowledge base retrieval from Obsidian vault |
+| **ml-specialist** | opus | Reviews ML/statistical approaches in pattern systems |
+| **orchestrator** | opus | Route tasks to appropriate agents, coordinate multi-agent workflows |
+| **pattern-learner** | opus | Observe decisions across domains, learn patterns, suggest automation |
+| **pdf-ingester** | sonnet | Import PDFs into the Obsidian knowledge base |
+| **plugin-manager** | haiku | Manage Claude Code plugin repositories |
+| **project-researcher** | sonnet | Research your vault for project-relevant knowledge |
+| **repo-topology** | sonnet | Understand codebase structure, map module relationships, trace dependencies |
+| **scout** | sonnet | Reconnaissance agent for content triage and routing |
+| **system-admin** | sonnet | Complex system projects, script development, configuration management |
+| **system-ops** | sonnet | Quick local machine operations and diagnostics |
+| **tech-writer** | sonnet | Create, review, or update documentation |
+| **web-clipper** | sonnet | Save web content to the Obsidian vault |
 
 ### Skills (21)
 
 | Skill | Purpose |
 |-------|---------|
-| /ai-capture | Auto-detect platform from URL and route to appropriate  |
-| /branch-health | Check git branch health - detect conflicts, staleness,  |
-| /browser-scrape | Use Playwright MCP to screen-scrape external UIs for da |
+| /ai-capture | Auto-detect platform from URL and route to appropriate capture command |
+| /branch-health | Check git branch health - detect conflicts, staleness, divergence |
+| /browser-scrape | Use Playwright MCP to screen-scrape external UIs for data extraction |
 | /ci-status | Get CI job status for a PR or current branch |
-| /conversation-compression | Compress long conversations using RAPTOR-inspired hiera |
-| /info-hub | Capability registry for agent ecosystem. Query what age |
-| /landscape | Show current work landscape - branch, repo, PRs, latest |
+| /conversation-compression | Compress long conversations using RAPTOR-inspired hierarchical summarization |
+| /info-hub | Capability registry for agent ecosystem - query what agents can do |
+| /landscape | Show current work landscape - branch, repo, PRs, latest commits |
 | /latest-comment | Get just the latest review comment on a PR |
-| /pre-commit-gate | Hard gate before any commit - runs lint, typecheck, and |
-| /pre-push-gate | Hard gate before any push - runs full build, all tests, |
-| /repo-documentation | Multi-agent skill for maintaining high-quality, situati |
-| /review-classify | Parse code-reviewer output and produce an action plan w |
-| /review-loop | Autonomous PR review workflow - address latest comment, |
-| /review-response | Respond to PR review comments, addressing false positiv |
+| /pre-commit-gate | Hard gate before any commit - runs lint, typecheck, and unit tests |
+| /pre-push-gate | Hard gate before any push - runs full build, all tests, branch health |
+| /repo-documentation | Multi-agent skill for maintaining high-quality, situational documentation |
+| /review-classify | Parse code-reviewer output and produce an action plan with classifications |
+| /review-loop | Autonomous PR review workflow - address comments, iterate until approved |
+| /review-response | Respond to PR review comments, addressing false positives and tradeoffs |
 | /tasks | Monitor and manage background task queue |
-| /terminal-ui-design | Create distinctive, production-grade terminal user inte |
-| /vault-stats | Display quick vault health stats showing file counts, q |
-| /workflow-map | Generate a visual dashboard of all coding/GitHub workfl |
-| /worktree-cleanup | Remove worktrees for merged/closed PRs and their associ |
-| /worktree-create | Create an isolated git worktree for a new feature/fix.  |
-| /worktree-list | Show all active git worktrees with their status (branch |
+| /terminal-ui-design | Create distinctive, production-grade terminal user interfaces |
+| /vault-stats | Display quick vault health stats showing file counts, quality metrics |
+| /workflow-map | Generate a visual dashboard of all coding/GitHub workflows and agents |
+| /worktree-cleanup | Remove worktrees for merged/closed PRs and their associated branches |
+| /worktree-create | Create an isolated git worktree for a new feature/fix |
+| /worktree-list | Show all active git worktrees with their status (branch, clean/dirty) |
 
 ### Commands (14)
 
 | Command | Purpose |
 |---------|---------|
-| /afk | AFK return command - shows time gap, runs stale check,  |
-| /chatgpt-single | Capture ChatGPT share conversations via Playwright. Sav |
-| /claude-web | Capture Claude.ai share conversations via Playwright. S |
-| /document | Create or update repository documentation using multi-a |
-| /extract-patterns | "Extract patterns from session logs (auto or deep mode) |
-| /gemini | Capture Gemini AI share conversations via Playwright. S |
-| /patterns-improve | "Review and apply improvement suggestions from pattern  |
-| /patterns-recurrence | "View pattern recurrence clusters and escalation status |
-| /patterns-verify | "Check verification status of applied pattern fixes" |
+| /afk | AFK return command - shows time gap, runs stale check, summarizes background |
+| /chatgpt-single | Capture ChatGPT share conversations via Playwright |
+| /claude-web | Capture Claude.ai share conversations via Playwright |
+| /document | Create or update repository documentation using multi-agent workflow |
+| /extract-patterns | Extract patterns from session logs (auto or deep mode) |
+| /gemini | Capture Gemini AI share conversations via Playwright |
+| /patterns-improve | Review and apply improvement suggestions from pattern analysis |
+| /patterns-recurrence | View pattern recurrence clusters and escalation status |
+| /patterns-verify | Check verification status of applied pattern fixes |
 | /perplexity | Capture Perplexity AI search/chat shares via Playwright |
-| /stale | Check if agents/skills modified since session start, re |
-| /surface-patterns | "Surface relevant patterns for current context" |
-| /timer | Timer Skill |
-| /timestamp | Timestamp Validation Skill |
+| /stale | Check if agents/skills modified since session start, recommend restart |
+| /surface-patterns | Surface relevant patterns for current context |
+| /timer | Time tracking for tasks and pattern analysis |
+| /timestamp | Validated timestamps with midnight rollover detection |
 
 *Auto-generated from frontmatter. See [/workflow-map](skills/workflow-map.md) for relationships.*
 <!-- COMPONENTS:END -->

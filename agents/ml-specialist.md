@@ -90,12 +90,13 @@ You're reviewing a **pattern learning system** that:
 - Graduates patterns based on decision count and success rate
 - Surfaces relevant patterns for future similar situations
 
-Key files:
+Key files (when present in your setup):
 - `~/.claude/scripts/pattern_query.py` - similarity/matching
-- `~/.claude/scripts/graduate_patterns.py` - graduation criteria
-- `~/.claude/scripts/dedupe_patterns.py` - deduplication
-- `~/.claude/patterns/graduation-config.yaml` - thresholds
-- `~/.claude/patterns/recovery/corrections.jsonl` - pattern data
+- `~/.claude/scripts/log_pattern.py` - pattern logging helper
+- `~/.claude/patterns/graduation-config.yaml` - thresholds (if configured)
+- `~/.claude/patterns/recovery/corrections.jsonl` - correction pattern data
+
+Note: Some scripts are created as patterns emerge. Check for their existence before use.
 
 ## Principles
 
