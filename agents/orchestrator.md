@@ -112,6 +112,52 @@ citadel → Returns summaries + paths
 scout → ROUTE to orchestrator with context
 ```
 
+### Knowledge Agent Selection
+
+| Need | Agent | Input | Output |
+|------|-------|-------|--------|
+| Quick fact lookup | `knowledge-citadel` | LOOKUP scope="..." "query" | Summaries + file paths |
+| Exploratory research | `project-researcher` | Research question | Comprehensive analysis |
+| Unknown item triage | `scout` | Item to investigate | Classification + routing |
+
+**Decision Flow:**
+```
+Do I know what I'm looking for?
+├─ YES (specific fact/file) → knowledge-citadel
+└─ NO (exploratory)
+    ├─ Unknown/unclassified item → scout
+    └─ Broad research question → project-researcher
+```
+
+**Thresholds:**
+- `knowledge-citadel`: 1-3 specific lookups, returns in <5 seconds
+- `project-researcher`: Multiple files, synthesis needed, may take minutes
+- `scout`: Item just landed, need classification before deciding action
+
+### Knowledge Ingestion Workflow
+
+When user says "Process [conversation/source]" or after batch classification:
+
+```
+1. CLASSIFY  → conversation-classifier (if not already classified)
+2. EXTRACT   → insight-extractor (for high-value items, topic-lens mode)
+3. VALIDATE  → knowledge-validator (auto-invoke after extraction)
+4. LINK      → concept-linker (script: concept_linker.py)
+```
+
+| Trigger | Start At | Steps |
+|---------|----------|-------|
+| "Process this conversation" | CLASSIFY | 1 → 2 → 3 → 4 |
+| "Extract insights from X" | EXTRACT | 2 → 3 → 4 |
+| "Validate recent insights" | VALIDATE | 3 → 4 |
+| After batch classification | EXTRACT | 2 → 3 → 4 (high-value only) |
+
+**Batch vs Real-time:**
+- **Batch processing**: Use scripts directly (`multi_classify.py`, `run_multi_classification.py`)
+- **Real-time/interactive**: Route through this workflow
+
+**Auto-validation rule:** After insight-extractor completes, always suggest running knowledge-validator unless user declines.
+
 ### Decision Helper: system-ops vs system-admin
 ```
 Is it running something that already exists?
